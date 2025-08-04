@@ -1,0 +1,97 @@
+@import '../assets/colors.scss';
+
+.admin__header,
+.admin__sider,
+.admin__content {
+    border: 1px solid rgb(189, 187, 187);
+}
+
+.admin__layout {
+    display: flex;
+    height: 100vh;
+
+    .admin__sider {
+        width: 15%;
+        height: 100vh;
+        background: $color-gradient;
+        padding: 0 10px;
+
+        .admin__avatar {
+            width: 100%;
+            height: 150px;
+            text-align: center;
+            padding: 30px 0;
+
+            img {
+                width: 150px;
+                height: 150px;
+                object-fit: contain;
+                border-radius: 50%;
+                border: 5px dashed $color-yellow;
+                background-color: $color-light-pink;
+                overflow: hidden;
+            }
+        }
+
+        ul {
+            font-size: 18px;
+            background: transparent;
+
+            li {
+                color: #F9FBFD;
+                margin: 10px;
+            }
+
+
+            svg {
+                font-size: 20px;
+                margin-right: 15px;
+            }
+
+            .ant-menu-item-selected {
+                background-color: $color-light-pink;
+                color: black;
+            }
+        }
+    }
+
+    .admin__main {
+        width: 85%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .admin__header {
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 30px;
+
+            .admin__logo{
+                width: 120px;
+                height: 100%;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .admin__icon{
+                font-size: 30px;
+                color: $color-yellow;
+                cursor: pointer;
+            }
+        }
+
+        .admin__content {
+            padding: 30px;
+            background-color: #F9FBFD;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            height: 550px;
+        }
+    }
+}
